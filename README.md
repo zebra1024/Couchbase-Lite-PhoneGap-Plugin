@@ -6,6 +6,25 @@ It works with native code as well as Cordova / PhoneGap on iOS and Android (you 
 
 For instructions on using the plugin, see the [PhoneGap Getting Started](https://developer.couchbase.com/documentation/mobile/current/installation/phonegap/index.html) page.
 
+## Zebra 1024 Updates
+
+* This plugin includes a CouchBase Lite Java build from the following repositories
+* https://github.com/zebra1024/couchbase-lite-java-core - branch tls12fix
+* https://github.com/zebra1024/couchbase-lite-android - branch tls12fix 
+* The tls12fix was branched from the 1.4.1 branch.
+* The CBL java code was updated to support TLS v1.2 for Android API level 16-21
+
+The TLS v1.2 fix uses code from https://github.com/square/okhttp/issues/2372. 
+
+###Library Updates:
+* OKHttp - version 3.10.0.
+* Jackson - 2.9.4
+   
+#Add Plugin to project
+To add the plugin to Cordova run the following command.
+
+cordova plugin add https://github.com/zebra1024/Couchbase-Lite-PhoneGap-Plugin.git#1.4.1A
+
 ## Architecture
 
 This is where the plugin fits in the picture:
